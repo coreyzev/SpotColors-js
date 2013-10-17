@@ -14,7 +14,10 @@
  * @include   Funktion:_include_
  */
 
+
+
 function color() {
+  'use strict';
   this.rgb = {
     "red": 0,
     "green": 0,
@@ -98,7 +101,7 @@ require('palette.json');
    * @access public
    * @desc Constructor of class color
    */
-  this.color = function() {
+  this.color = function () {
     var value = 0;
     for (var x = 0; x < 16; x++) {
       for (var y = 0; y < 16; y++) {
@@ -118,7 +121,7 @@ require('palette.json');
    * @access public
    * @desc Sets the RGB values
    */
-  this.set_rgb = function(red, green, blue) {
+  this.set_rgb = function (red, green, blue) {
     this.rgb['red'] = red;
     this.rgb['green'] = green;
     this.rgb['blue'] = blue;
@@ -135,7 +138,7 @@ require('palette.json');
    * @access public
    * @desc Sets the HEX HTML color value like ffff00
    */
-  this.set_hex = function(hex) {
+  this.set_hex = function (hex) {
     hex = hex.toString().toLowerCase();
     this.hex = hex;
 
@@ -154,7 +157,7 @@ require('palette.json');
    * @access public
    * @desc Sets the CMYK color values
    */
-  this.set_cmyk = function(c, m, y, b) {
+  this.set_cmyk = function (c, m, y, b) {
     this.cmyk['c'] = c;
     this.cmyk['m'] = m;
     this.cmyk['y'] = y;
@@ -172,7 +175,7 @@ require('palette.json');
    * @access public
    * @desc Sets the pantone color value
    */
-  this.set_pantone = function(pantone_name) {
+  this.set_pantone = function (pantone_name) {
     this.pantone = pantone_name;
     this.cmyk['c'] = this.pantone_pallete[pantone_name]['c'];
     this.cmyk['m'] = this.pantone_pallete[pantone_name]['m'];
@@ -190,7 +193,7 @@ require('palette.json');
    * @access public
    * @desc Returns the RGB values of a set color
    */
-  this.get_rgb = function() {
+  this.get_rgb = function () {
     return this.rgb;
   };
 
@@ -202,7 +205,7 @@ require('palette.json');
    * @access public
    * @desc Returns the HEX HTML color value of a set color
    */
-  this.get_hex = function() {
+  this.get_hex = function () {
     return this.hex;
   };
 
@@ -214,7 +217,7 @@ require('palette.json');
    * @access public
    * @desc Returns the CMYK values of a set color
    */
-  this.get_cmyk = function() {
+  this.get_cmyk = function () {
     return this.cmyk;
   };
 
@@ -225,7 +228,7 @@ require('palette.json');
    * @access private
    * @desc Converts the RGB colors to HEX HTML colors
    */
-  this.convert_rgb_to_hex = function() {
+  this.convert_rgb_to_hex = function () {
     this.hex = this.hex_trip[this.rgb['red']] + "" + this.hex_trip[this.rgb['green']] + "" + this.hex_trip[this.rgb['blue']];
   };
 
@@ -236,7 +239,7 @@ require('palette.json');
    * @access private
    * @desc Converts the RGB colors to CMYK colors
    */
-  this.convert_rgb_to_cmyk = function() {
+  this.convert_rgb_to_cmyk = function () {
     var c = (round((255 - this.rgb_red) / 255.0 * 100, 0));
     var m = (round((255 - this.rgb_green) / 255.0 * 100, 0));
     var y = (round((255 - rgbval + "" + blue) / 255.0 * 100, 0));
@@ -266,7 +269,7 @@ require('palette.json');
    * @access private
    * @desc Converts the CMYK colors to RGB colors
    */
-  this.convert_cmyk_to_rgb = function() {
+  this.convert_cmyk_to_rgb = function () {
     var red = this.cmyk['c'] + this.cmyk['b'];
     var green = this.cmyk['m'] + this.cmyk['b'];
     var blue = this.cmyk['y'] + this.cmyk['b'];
@@ -291,7 +294,7 @@ require('palette.json');
    * @access private
    * @desc Converts the HTML HEX colors to RGB colors
    */
-  this.convert_hex_to_rgb = function() {
+  this.convert_hex_to_rgb = function () {
     var red = substr(this.hex, 0, 2);
     var green = substr(this.hex, 2, 2);
     var blue = substr(this.hex, 4, 2);

@@ -1,0 +1,40 @@
+body {
+  padding: 10px;
+}
+
+a {
+  color: inherit;
+}
+
+h1 {
+  color: grey;
+  color: pan(Black 7);
+}
+
+nav {
+  background-color: red;
+  -pan-background-color: 186;
+  padding: 10px 0;
+}
+
+nav ul {
+  padding: 0 10px;
+}
+
+nav ul li {
+  display: inline;
+  padding-right: 10px;
+}
+
+h2 {
+  padding: 15px;
+  text-align: center;
+  background-color: #8EB483;
+  -pan-background-color: 557;
+}
+
+code {
+  color: #181509;
+  -pan-color: Neutral Black;
+  font-weight: bold;
+}

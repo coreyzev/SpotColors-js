@@ -148,7 +148,7 @@ function color() {
     var blue = this.hex.substr(4, 2);
 
     var found = false;
-    for (var = i = 0; i < this.hex_trip.length() && !found; i++) {
+    for (var i = 0; i < this.hex_trip.length() && !found; i++) {
       if (this.hex_trip[i] === red) {
         this.rgb.red = i;
         found = true;
@@ -156,7 +156,7 @@ function color() {
     }
 
     found = false;
-    for (var = i = 0; i < this.hex_trip.length() && !found; i++) {
+    for (var i = 0; i < this.hex_trip.length() && !found; i++) {
       if (this.hex_trip[i] === green) {
         this.rgb.green = i;
         found = true;
@@ -164,7 +164,7 @@ function color() {
     }
 
     found = false;
-    for (var = i = 0; i < this.hex_trip.length() && !found; i++) {
+    for (var i = 0; i < this.hex_trip.length() && !found; i++) {
       if (this.hex_trip[i] === blue) {
         this.rgb.blue = i;
         found = true;

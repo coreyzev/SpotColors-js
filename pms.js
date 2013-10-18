@@ -37,7 +37,3 @@ function DEC2HEX(i) {
   }
   return result
 };
-
-function CorrelatePMS2HEX () {
-
-};

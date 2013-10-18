@@ -8,7 +8,7 @@
  *  - Pantone
  *  - HEX Codes for HTML
  *
- * author JS, Corey Zev Holland
+ * author Corey Zev Holland
  */
 
 

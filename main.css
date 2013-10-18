@@ -8,7 +8,7 @@ a {
 
 h1 {
   color: grey;
-  color: pan(Black 7);
+  -pan-color: pan(Black 7);
 }
 
 nav {

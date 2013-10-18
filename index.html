@@ -11,8 +11,18 @@
 		<link rel="stylesheet" id="mainCss" type="text/css" href="main.css">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 		<script type="text/javascript" src="spotcolors.js"></script>
-		<script type="text/javascript" src="pms.js"></script>
-		<script type="text/javascript" src="colorConverter.js"></script>
+		<script type="text/javascript">
+
+			var color = new color();
+
+			$(document).ready(function(){
+					color.set_pantone("Black 7");
+					var newColor = "#" + color.get_hex();
+					var ss = document.styleSheets[1];
+					var ssLength = ss.rules.length;
+					ss.insertRule("h1 {color:" + newColor + ";}", ssLength);
+			});
+		</script>
 	</head>
 	<body>
 		<div>
@@ -59,7 +69,6 @@
 			</div>
 		</div>
 		<script type="text/javascript" charset="utf-8">
-			var color = new color();
 		</script>
 	</body>
 </html>

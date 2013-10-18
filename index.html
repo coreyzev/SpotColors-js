@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>SpotColors.js</title>
+		<meta name="description" content="" />
+		<meta name="author" content="datevid" />
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="spotcolors.js"></script>
+		<script type="text/javascript" src="pms.js"></script>
+		<script type="text/javascript" src="colorConverter.js"></script>
+	</head>
+	<body>
+		<div>
+			<header>
+				<h1>SpotColors.js</h1>
+			</header>
+			<nav>
+			</nav>
+			<div>
+				<pre>
+// Set Pantone color name
+color.set_pantone("304");
+
+var cmyk = color.get_cmyk();
+alert("CMYK - Cyan:" + "" + cmyk['cyan'] + "" + " Magenta " + "" + cmyk['magenta'] + "" + " Yelow:" + "" + cmyk['yellow'] + "" + " Black " + "" + cmyk['cyan'] + "" + "<br>");
+
+var rgb = color.get_rgb();
+alert("RGB - Red:" + "" + rgb['red'] + "" + " Green " + "" + rgb['green'] + "" + " Blue:" + "" + rgb['blue'] + "" + "<br>");
+
+var hex = color.get_hex();
+alert("HEX - <b><font color=\"" + hex + "\">" + hex + "</font></b><br><br>");
+
+// Set CMYK color values
+color.set_cmyk("100", "57", "0", "2");
+
+cmyk = color.get_cmyk();
+alert("CMYK - Cyan:" + "" + cmyk['cyan'] + "" + " Magenta " + "" + cmyk['magenta'] + "" + " Yelow:" + "" + cmyk['yellow'] + "" + " Black " + "" + cmyk['cyan'] + "" + "<br>");
+
+rgb = color.get_rgb();
+alert("RGB - Red:" + "" + rgb['red'] + "" + " Green " + "" + rgb['green'] + "" + " Blue:" + "" + rgb['blue'] + "" + "<br>");
+
+hex = color.get_hex();
+alert("HEX - <b><font color=\"" + hex + "\">" + hex + "</font></b><br><br>");
+
+
+// Set CMYK color values
+color.set_rgb("255", "0", "0");
+
+cmyk = color.get_cmyk();
+alert("CMYK - Cyan:" + "" + cmyk['cyan'] + "" + " Magenta " + "" + cmyk['magenta'] + "" + " Yelow:" + "" + cmyk['yellow'] + "" + " Black " + "" + cmyk['cyan'] + "" + "<br>");
+
+rgb = color.get_rgb();
+alert("RGB - Red:" + "" + rgb['red'] + "" + " Green " + "" + rgb['green'] + "" + " Blue:" + "" + rgb['blue'] + "" + "<br>");
+
+hex = color.get_hex();
+alert("HEX - <b><font color=\"" + hex + "\">" + hex + "</font></b><br><br>");
+
+// Set HEX color values
+color.set_hex("ff00ff");
+
+cmyk = color.get_cmyk();
+alert("CMYK - Cyan:" + "" + cmyk['cyan'] + "" + " Magenta " + "" + cmyk['magenta'] + "" + " Yelow:" + "" + cmyk['yellow'] + "" + " Black " + "" + cmyk['cyan'] + "" + "<br>");
+
+rgb = color.get_rgb();
+alert("RGB - Red:" + "" + rgb['red'] + "" + " Green " + "" + rgb['green'] + "" + " Blue:" + "" + rgb['blue'] + "" + "<br>");
+
+hex = color.get_hex();
+alert("HEX - <b><font color=\"" + hex + "\">" + hex + "</font></b><br>");
+				</pre>
+			</div>
+		</div>
+		<script type="text/javascript" charset="utf-8">
+			var color = new color();
+		</script>
+	</body>
+</html>

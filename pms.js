@@ -28,14 +28,6 @@ function HEX2PMS(hex) {
   }
 };
 
-function HEX2RGB(hex) {
-  var red = this.hex.substr(0, 2);
-  var green = this.hex.substr(2, 2);
-  var blue = this.hex.substr(4, 2);
-
-
-};
-
 function DEC2HEX(i) {
   var result = "00";
   if (i >= 0 && i <= 15) {
@@ -44,4 +36,8 @@ function DEC2HEX(i) {
     result = i.toString(16);
   }
   return result
+};
+
+function CorrelatePMS2HEX () {
+
 };

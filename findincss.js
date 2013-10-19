@@ -15,7 +15,7 @@
 
   $.when($.get("main.css"))
     .done(function(response) {
-        console.log(response);
+//        console.log(response);
     });
 
 //  if (FileReader) {alert("yup");console.log("hola datevid");}

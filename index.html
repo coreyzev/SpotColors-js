@@ -8,20 +8,27 @@
 		<meta name="author" content="Corey Zev Holland" />
 		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 		<link rel="stylesheet" id="normalizeCss" type="text/css" href="normalize.css">
-		<link rel="stylesheet" id="mainCss" type="text/css" href="main.css">
+		<link rel="stylesheet" id="panCss" type="text/css" href="main.css">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 		<script type="text/javascript" src="spotcolors.js"></script>
+		<script type="text/javascript" src="findincss.js"></script>
+		<script type="text/javascript" id="pantone-script">
+		/**
+			spotcolor("h1","color","Black 7");
+			spotcolor("#nav","background-color","186");
+			spotcolor("h2","background-color","557");
+			spotcolor("code","color","Neutral Black");
+		**/
+			$('h1').spotcolor("color","Black 7");
+		</script>
+		<style type="text/css" id="pantone-style">
+			h1 { color: Black 7;}
+			#nav { background-color: 186;}
+			h2 { background-color: 557;}
+			code {color: Neutral Black;}
+		</style>
 		<script type="text/javascript">
 
-			var color = new color();
-
-			$(document).ready(function(){
-					color.set_pantone("Black 7");
-					var newColor = "#" + color.get_hex();
-					var ss = document.styleSheets[1];
-					var ssLength = ss.rules.length;
-					ss.insertRule("h1 {color:" + newColor + ";}", ssLength);
-			});
 		</script>
 	</head>
 	<body>

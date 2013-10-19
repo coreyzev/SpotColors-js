@@ -11,25 +11,12 @@
 		<link rel="stylesheet" id="panCss" type="text/css" href="main.css">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 		<script type="text/javascript" src="spotcolors.js"></script>
-		<script type="text/javascript" src="findincss.js"></script>
-		<script type="text/javascript" id="pantone-script">
-		/**
-			spotcolor("h1","color","Black 7");
-			spotcolor("#nav","background-color","186");
-			spotcolor("h2","background-color","557");
-			spotcolor("code","color","Neutral Black");
-		**/
-			$('h1').spotcolor("color","Black 7");
-		</script>
 		<style type="text/css" id="pantone-style">
 			h1 { color: Black 7;}
 			#nav { background-color: 186;}
 			h2 { background-color: 557;}
 			code {color: Neutral Black;}
 		</style>
-		<script type="text/javascript">
-
-		</script>
 	</head>
 	<body>
 		<div>
@@ -75,7 +62,12 @@
 				</code></pre>
 			</div>
 		</div>
-		<script type="text/javascript" charset="utf-8">
-		</script>
+		<script type="text/javascript" src="findincss.js"></script>
+		<script type="text/javascript" id="pantone-script">
+/*			$('h1').spotcolor("color","Black 7");
+			$("#nav").spotcolor("background-color","186");
+			$("h2").spotcolor("background-color","557");
+			$("code").spotcolor("color","Neutral Black");
+	*/	</script>
 	</body>
 </html>

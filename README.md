@@ -39,7 +39,7 @@ See [github issue list](issues) for current list [Empty, add some].
 ### Step 1: Link to files
 *Note: still in beta so the files are broken up a bit, easier for me to work with.*
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -51,7 +51,8 @@ See [github issue list](issues) for current list [Empty, add some].
         </div>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
         <script type="text/javascript" src="spotcolors.js"></script>
-        <script type="text/javascript" src="findincss.js"></script>    </body>
+        <script type="text/javascript" src="findincss.js"></script>    
+    </body>
 </html>
 
 ```
@@ -69,7 +70,7 @@ At the end of your `<head>` section add your `<style type="text/css">` section
 
 like this:
 
-```
+```html
     <style type="text/css" id="pantone-style">
 	    h1 { color: Black 7;}
 	    #nav { background-color: 186;}
@@ -89,7 +90,7 @@ After your script links, right before `<body>` tag add your `<script type="text/
 
 like this:
 
-```
+```html
 	<script type="text/javascript" id="pantone-script">
 		$('h1').spotcolor("color","Black 7");
 		$("#nav").spotcolor("background-color","186");
